@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang= "ko">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+  <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<meta charset="utf-8">
+<title>Weple - 어디서나 즐거움을 플레이하다</title>
+  <header>
+    <img src="https://i.imgur.com/yzGyvHW.png" style="widht:50px; height:50px;">
+    <button type="button" class="btn  dropdown-toggle" onclick="noti();">
+       <i class="fa fa-bell"></i>
+      </button>
+    
+    <ul class="dropdown-menu" style="display:none;">
+      <h3 style="width:93%; text-align:right; margin-right:50px;">알림</h3>
+        <li>
+          <a href="#" class="top-text-block">
+            <div class="top-text-heading">새로워진 위플을 만나보세요.</div>
+            <div class="top-text-light">달라진 건 단 하나, 모든 것. <br>모든 게 새로워진 온라인 게임 플랫폼, 위플을 경험해보세요.</div>
+          </a> 
+        </li>
+       <li>
+        <div class="loader-topbar"></div>
+       </li>
+      </ul>
+
+  </header>
+</head>
+<body>
+  <br><br><br><br>
+  <section class="horizontal">
+    <h4 style="margin-left:20px; font-size:20px;"><strong>이런 게임 어때요?</strong></h4>
+  <div class="cards-wrapper">
+    <!-- -->
+    <a class="card" href="play.html?link=https://gemioli.com/relicrunway/">
+      <div class="card__background" style="background-image: url(https://i.pcmag.com/imagery/articles/04DmSKHJkoHrv9o4emsLsxu-1..v_1569483859.jpg)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">TEMPLE RUN - 템플런</h3>
+         <p class="card__category" style="font-size: 1.2rem;">장애물을 피하며 새로운 세계로의 끝없는 질주를 시작해보세요!</p>
+      </div>
+    </a>
+    <!-- -->
+    <a class="card" href="play.html?link=https://ko.y8.com/games/moto_x3m">
+      <div class="card__background" style="background-image: url(https://m.coolmathgames.com/sites/default/files/styles/mobile_detail/public/game_m_screenshot/moto-x3m-game-screenshot-2.jpg?itok=dggWPHzN)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">Moto x3m</h3>
+         <p class="card__category" style="font-size: 1.2rem;">점프! 스핀! 다양한 맵들에서 난관을 해쳐나가는 오토바이 라이더에 도전해보세요!</p>
+      </div>
+    </a>
+    <!-- -->
+     <a class="card" href="play.html?link=https://www.agame.com/game/endless-lake?play=true">
+      <div class="card__background" style="background-image: url(https://d2jcw5q7j4vmo4.cloudfront.net/vLGLwGVepqamEMeGl0hspY1-HZbUcgqgWViBO2G52PyaujWPpneNw9VfayUQqtwJZPA=w1440-h620)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">Endless Lake - 무한의강</h3>
+         <p class="card__category" style="font-size: 1.2rem;">끝이 보이지 않는 마법의 강 위에서 오랫동안 살아남아보세요!</p>
+      </div>
+    </a>
+    <!-- -->
+    <a class="card" href="play.html?link=https://m.plonga.com/Arcade/Rise-Up-Online-Game">
+      <div class="card__background" style="background-image: url(https://games.lol/wp-content/uploads/2018/10/rise-up-game-play-pc-download.png)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">Rise up</h3>
+         <p class="card__category" style="font-size: 1.2rem;">풍선이 터지지 않도록 보호하는 것은 당신의 몫이죠!</p>
+      </div>
+    </a>
+    <!-- -->
+  </div>
+</section>
+  <br><br>
+  <h4 style="margin-left:15px; font-size:20px; margin-bottom:-15px;"><strong>최신 게임</strong></h4>
+  <section class="hero-section">
+  <div class="card-grid">
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
+      <div class="card__content">
+        <p class="card__category">Category</p>
+        <h3 class="card__heading">Example Card Heading</h3>
+      </div>
+    </a>
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+      <div class="card__content">
+        <p class="card__category">Category</p>
+        <h3 class="card__heading">Example Card Heading</h3>
+      </div>
+    </a>
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+      <div class="card__content">
+        <p class="card__category">Category</p>
+        <h3 class="card__heading">Example Card Heading</h3>
+      </div>
+    </li>
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+      <div class="card__content">
+        <p class="card__category">Category</p>
+        <h3 class="card__heading">Example Card Heading</h3>
+      </div>
+    </a>
+  <div>
+</section>
+
+</body>
+</html>
+
+<style>
+  body {
+  margin:20px;
+}
+
+header {
+  position:fixed;
+  top:0;
+  height:80px;
+  width:100%;
+  background:#fff;
+  z-index:99999999;
+  border-radius:0 20px 20px 0;
+}
+
+header * {
+  display:inline-block;
+}
+
+header img {
+  position:fixed;
+  top:15px;
+  left:20px;
+}
+
+header button {
+  position:fixed;
+  top:25px;
+  right:20px;
+}
+
+.dropdown-menu {
+  display:block;
+  position:fixed;
+  top:80px;
+  left:15%;
+  text-align:right;
+  width:80%;
+  border-radius:20px;
+}
+
+.top-text-block {
+  display: block;
+  padding: 3px 10px;
+  clear: both;
+  font-weight: 400;
+  line-height: 0.5;
+  color: #333;
+  white-space: inherit !important;
+  border-bottom: 1px solid #f4f4f4;
+  position: relative;
+  border-radius:20px;
+}
+.top-text-block:hover:before {
+  content: '';
+  width: 4px;
+  background: #f05a1a;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius:20px;
+}
+.top-text-block.unread {
+  background: #ffc;
+}
+.top-text-block .top-text-light {
+  color: #999;
+  font-size: 0.8em;
+}
+
+.horizontal {
+  display: grid;
+  margin-left:-25px;
+  grid-template-columns:min(2rem, 5vw) [center-start] 1fr [center-end]  min(2rem, 5vw);
+}
+.horizontal > * {
+  grid-column: center;
+}
+
+.cards-wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  grid-column: center-start / -1;
+  overflow: auto;
+  display: flex;
+  padding-bottom: 1em;
+}
+
+.cards-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.cards-wrapper .card {
+  color: #15928A;
+  height: 20em;
+  min-width: 13em;
+  margin: 1em;
+  margin-bottom:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards-wrapper .card p {
+  font-size: 1.5em;
+}
+.cards-wrapper .card:last-child {
+  margin-right: 0;
+}
+.cards-wrapper::after {
+  content: "";
+  display: block;
+  min-width: min(2rem, 5vw);
+}
+
+
+:root{
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+}
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-section{
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  margin-top:30px;
+  padding: 10px;
+  overflow:scroll;
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media(min-width: 540px){
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.card{
+  list-style: none;
+  position: relative;
+}
+
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+  border-radius:20px;
+}
+
+.card:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+  </style>
+
+  <script>
+    function noti() {
+  if($(".dropdown-menu").css("display") == "none"){
+    $(".dropdown-menu").show();
+} else {
+    $(".dropdown-menu").hide();
+}
+}
+
+  </script>
