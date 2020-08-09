@@ -76,7 +76,7 @@
 <h4 style="margin-left:15px; font-size:20px;"><strong>플레이로그. </strong><a href='javascript:clearLog();' style="font-size:13px; text-decoration:none;"> 모두 지우기</a></h4>
   <section class="horizontal" style="margin-right:-20px;">
   <div class="cards-wrapper" id="playlog">
-    <img src="https://images.ctfassets.net/5m01esa8nofr/4PT1wAuMXKkyuEMK2oia0y/3e0ae5708483b205b9787523eb91a6d9/404.gif" style="width:30%;">
+    <img src="https://images.ctfassets.net/5m01esa8nofr/4PT1wAuMXKkyuEMK2oia0y/3e0ae5708483b205b9787523eb91a6d9/404.gif" style="margin-left:20px;width:100px; height:100px;">
     <span style="padding-top:40px; margin-left:20px;">아직 실행한 게임이 없네요.</span>
 
   </div>
@@ -439,7 +439,7 @@ header .full {
 
 function clearLog() {
   javascript:sessionStorage.clear();
-  $("#playlog").html('<img src="https://images.ctfassets.net/5m01esa8nofr/4PT1wAuMXKkyuEMK2oia0y/3e0ae5708483b205b9787523eb91a6d9/404.gif" style="width:30%;"><span style="padding-top:40px; margin-left:20px;">아직 실행한 게임이 없네요.</span>');
+  $("#playlog").html('<img src="https://images.ctfassets.net/5m01esa8nofr/4PT1wAuMXKkyuEMK2oia0y/3e0ae5708483b205b9787523eb91a6d9/404.gif" style="margin-left:20px;width:100px; height:100px;"> <span style="padding-top:40px; margin-left:20px;">아직 실행한 게임이 없네요.</span>');
   mdtoast('플레이로그를 모두 삭제했어요', { 
   type: 'success',
   duration: 2500
