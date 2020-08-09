@@ -75,7 +75,7 @@
 <br><br>
 <h4 style="margin-left:15px; font-size:20px;"><strong>플레이로그. </strong><a href='javascript:clearLog();' style="font-size:13px; text-decoration:none;"> 모두 지우기</a></h4>
   <section class="horizontal" style="margin-right:-20px;">
-  <div class="cards-wrapper" id="playlog">
+  <div class="cards-wrapper" id="playlog" style="overflow-y:hidden;">
     <img src="https://images.ctfassets.net/5m01esa8nofr/4PT1wAuMXKkyuEMK2oia0y/3e0ae5708483b205b9787523eb91a6d9/404.gif" style="margin-left:20px;width:100px; height:100px;">
     <span style="padding-top:40px; margin-left:20px;">아직 실행한 게임이 없네요.</span>
 
@@ -419,8 +419,8 @@ header .full {
         $("#playlog").html("");
       }
       var bg = $(this).children('.card__background').css('background-image').replace("\"", "");
-      var title = $(this).children('.card__content').children('.card__heading').html();
-      var target = '<a class="card small" href="'+this.href+'" style="height:100px; width:100px;"><div class="card__background" style="background-image: '+bg+'"></div><div class="card__content"><h3 class="card__heading" style="word-spacing: 0vw;font-size:20px;">'+title+'Rise up</h3></div></a>';
+      var title = $(this).children('.card__content').children('.card__heading').html().substring(0, 12);
+      var target = '<a class="card small" href="'+this.href+'" style="height:100px; width:100px;"><div class="card__background" style="background-image: '+bg+'"></div><div class="card__content"><h3 class="card__heading" style="margin-top:0px;">'+title+'</h3></div></a>';
 
       $("#playlog").append(target);
       sessionStorage.setItem("playlog", $("#playlog").html());
