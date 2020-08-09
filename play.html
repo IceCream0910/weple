@@ -62,18 +62,21 @@ function getParam(sname) {
 </script> 
 <meta charset="utf-8">
 <title>Weple - 어디서나 즐거움을 플레이하다</title>
+<button type="button" class="btn dropdown-toggle full" onclick="javascript:history.back();" style="position:fixed;top:25px;left:20px;">
+       <i class="fa fa-times"></i>
+      </button>
 <button type="button" class="btn dropdown-toggle full" onclick="toggleFull();" style="position:fixed;top:25px;right:20px;">
-       <i class="fa fa-bell"></i>
+       <i class="fa fa-expand"></i>
       </button>
 
 </head>
 <body onload='document.getElementById("iframe").src = getParam("link");setTimeout(function() {$(".loader").hide();$("#iframe").show();}, 3500);' style="overflow:hidden;">
 
-<div class="loader" style="margin:-10px;border:none;width:103vw;height:102vh; background:#006cc7;">
+<div class="loader" style="border:none;width:100vw;height:102vh; background:#006cc7;">
 <img src="https://i.imgur.com/GZNREnz.gif" style="width:100%;">
 </div>
 
-<iframe id="iframe" src="about:blank" style="margin:-10px;border:none;width:102vw;height:102vh;display:none;">
+<iframe id="iframe" src="about:blank" style="border:none;width:100vw;height:100vh;display:none;">
 </body>
 </html>
 

@@ -6,7 +6,8 @@
   <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-
+<link rel="stylesheet" href="snackbar/mdtoast.min.css" />
+<script src="snackbar/mdtoast.min.js"></script>
 
 <meta charset="utf-8">
 <title>Weple - 어디서나 즐거움을 플레이하다</title>
@@ -32,7 +33,7 @@
 
   </header>
 </head>
-<body>
+<body onload='loadData();'>
   <br><br><br><br>
   <section class="horizontal" style="margin-right:-20px;">
   <div class="cards-wrapper">
@@ -71,36 +72,119 @@
     <!-- -->
   </div>
 </section>
+<br><br>
+<h4 style="margin-left:15px; font-size:20px;"><strong>플레이로그. </strong><a href='javascript:clearLog();' style="font-size:13px; text-decoration:none;"> 모두 지우기</a></h4>
+  <section class="horizontal" style="margin-right:-20px;">
+  <div class="cards-wrapper" id="playlog">
+    <img src="https://images.ctfassets.net/5m01esa8nofr/4PT1wAuMXKkyuEMK2oia0y/3e0ae5708483b205b9787523eb91a6d9/404.gif" style="width:30%;">
+    <span style="padding-top:40px; margin-left:20px;">아직 실행한 게임이 없네요.</span>
+
+  </div>
+</section>
   <br><br>
-  <h4 style="margin-left:15px; font-size:20px; margin-bottom:-15px;"><strong>최신 게임</strong></h4>
+  <h4 style="margin-left:15px; font-size:20px; margin-bottom:-15px;"><strong>모든 게임</strong></h4>
   <section class="hero-section">
   <div class="card-grid">
-    <a class="card" href="#">
-      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
+    <a class="card" href="play.html?link=https://www.agame.com/game/stickman-swing?play=true">
+      <div class="card__background" style="background-image: url(https://lh3.googleusercontent.com/TwINMaZvPBSuKXAReLknfO6WBJ4fMETgKa8dMEH0Qn8y87NlBl3ZFdXlyNp7Y-UW4g)"></div>
       <div class="card__content">
-        <p class="card__category">Category</p>
-        <h3 class="card__heading">Example Card Heading</h3>
+        <h3 class="card__heading">Stickman Hook</h3>
       </div>
     </a>
-    <a class="card" href="#">
-      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+    <a class="card" href="play.html?link=http://www.gamesfreak.net/games/Crossy-road.html?play">
+      <div class="card__background" style="background-image: url(https://image.winudf.com/v2/image1/Y29tLnlvZG8xLmNyb3NzeXJvYWRfc2NyZWVuXzdfMTU1NTE5Mjc4M18wOTU/screen-8.jpg?fakeurl=1&type=.jpg)"></div>
       <div class="card__content">
-        <p class="card__category">Category</p>
-        <h3 class="card__heading">Example Card Heading</h3>
+        <h3 class="card__heading">길건너 친구들</h3>
       </div>
     </a>
-    <a class="card" href="#">
-      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+    <a class="card" href="play.html?link=https://ko.y8.com/games/paper_io_2">
+      <div class="card__background" style="background-image: url(https://dl.memuplay.com/new_market/img/io.voodoo.paper2.sc2.2019-01-04-12-09-06.jpg)"></div>
       <div class="card__content">
-        <p class="card__category">Category</p>
-        <h3 class="card__heading">Example Card Heading</h3>
+        <h3 class="card__heading">Paper.io</h3>
       </div>
     </li>
-    <a class="card" href="#">
-      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+    <a class="card" href="play.html?link=https://api.razzlepuzzles.com/2048?locale=ko">
+      <div class="card__background" style="background-image: url(https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/cf/47/65/cf4765ef-4dd5-4e00-9dc3-402d5da92339/source/512x512bb.jpg)"></div>
       <div class="card__content">
-        <p class="card__category">Category</p>
-        <h3 class="card__heading">Example Card Heading</h3>
+        <h3 class="card__heading">2048</h3>
+      </div>
+    </a>
+    <a class="card" href="play.html?link=https://play.famobi.com/html5game/1d87d326-b266-4148-b2c8-c720d5285632/A1000-1">
+      <div class="card__background" style="background-image: url(https://www.contezero.com/user/pages/03.games/06.casual/color-pixel-art-classic/screenshot-2019-05-15.18.37.17.jpg)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">컬러 픽셀아트</h3>
+      </div>
+    </a>
+    <a class="card" href="play.html?link=https://play.famobi.com/table-tennis-world-tour/A-5U0J1">
+      <div class="card__background" style="background-image: url(https://lh3.googleusercontent.com/tfsW89zQlPFnLqgElWA-7j6b6EDKQiS08j0U5qDRhWXcTtzmZuWcaW1GVVAB1n6_xQ=w412-h220-rw)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">탁구</h3>
+      </div>
+    </a>
+    <a class="card" href="play.html?link=https://html5.gamedistribution.com/7c1b2e56439f4ab9ac2849eff042216b/">
+      <div class="card__background" style="background-image: url(https://mobimg.b-cdn.net/v2/fetch/4b/4bd676e8def1e2e7ecb359cb5d53729a.jpeg)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">Dancing Line</h3>
+      </div>
+    </a>
+     <a class="card" href="play.html?link=https://www.yiv.com/games/House-Paint/index.html">
+      <div class="card__background" style="background-image: url(https://image.winudf.com/v2/image1/Y29tLmhvdXNlcGFpbnQuZ2FtZV9zY3JlZW5fMTFfMTU1NTAzMTk2Ml8wMDg/screen-14.jpg?fakeurl=1&type=.jpg)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">House Paint</h3>
+      </div>
+    </a>
+    <a class="card" href="play.html?link=https://m.plonga.com/adventure/Stars-Ascend">
+      <div class="card__background" style="background-image: url(https://image.winudf.com/v2/image/Y29tLnNlZXBpYWdhbWVzLmFzY2VuZF9zY3JlZW5fMV8xNTIyODUwOTUyXzAyNA/screen-1.jpg?fakeurl=1&type=.jpg)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">Stars Ascend</h3>
+      </div>
+    </a>
+    <a class="card" href="play.html?link=https://gemioli.com/hooligans/">
+      <div class="card__background" style="background-image: url(https://images.crazygames.com/skatehooligansb.png?auto=format,compress&q=100&cs=strip)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">Skate Hooligans</h3>
+      </div>
+    </a>
+    <a class="card" href="play.html?link=https://gemioli.com/yetisensation/html5/gemioli/">
+      <div class="card__background" style="background-image: url(https://image.winudf.com/v2/image1/Y29tLmZmMjc5OGZmLllFVElTRU5TQVRJT05fc2NyZWVuXzZfMTU1MjQwMTA0MF8wNzk/screen-6.jpg?fakeurl=1&type=.jpg)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">Yeti Sensation</h3>
+      </div>
+    </a>
+    <a class="card" href="play.html?link=https://play.famobi.com/ufo-run">
+      <div class="card__background" style="background-image: url(https://cdn.pomu.com/files/game/img_mobile/16087/Ufo-Run-The-Castle-Tower.webp)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">UFO Run</h3>
+      </div>
+    </a>
+    <a class="card" href="play.html?link=https://playcanv.as/p/2OlkUaxF/">
+      <div class="card__background" style="background-image: url(https://lh3.googleusercontent.com/CAhnu_KOkgfkshabSxdl6vZpbfHV5h1dBU6inAkj09U96NqL13gGfYbHn0ijGX7tP5hqUB8-JiI=w640-h400-e365)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">Flappy Bird</h3>
+      </div>
+    </a>
+    <a class="card" href="play.html?link=https://m.plonga.com/Racing/Hard-Truck-Game">
+      <div class="card__background" style="background-image: url(https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,g=0.5x0.5,f=auto/679c9524608400af60d39e89b24e34b2.png)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">Hard Truck</h3>
+      </div>
+    </a>
+    <a class="card" href="play.html?link=http://play.famobi.com/hextris">
+      <div class="card__background" style="background-image: url(https://www.contezero.com/user/pages/03.games/08.puzzle/hextris/screenshot-2019-06-05.16.03.39.jpg)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">hextris.io</h3>
+      </div>
+    </a>
+    <a class="card" href="play.html?link=https://play.famobi.com/3d-air-hockey">
+      <div class="card__background" style="background-image: url(https://img-hws.y8.com/cloud/v2-y8-thumbs-big-thumbnails-001/102809/big.gif)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">3d 에어하키</h3>
+      </div>
+    </a>
+    <a class="card" href="play.html?link=https://play.famobi.com/element-blocks">
+      <div class="card__background" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSkS5rLQQI5a-7R7NajIuOGe8kDMNwH1ILoNw&usqp=CAU)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">Element Blocks</h3>
       </div>
     </a>
   <div>
@@ -324,6 +408,27 @@ header .full {
   </style>
 
   <script>
+
+    function loadData() {
+      var logData = sessionStorage.getItem("playlog");
+      if(logData != null) {
+        $("#playlog").html(logData);
+      }
+      
+    }
+
+    $('.card').on("click",function(){
+      if($("#playlog").html().includes("아직 실행한 게임이 없네요")) {
+        $("#playlog").html("");
+      }
+      var bg = $(this).children('.card__background').css('background-image').replace("\"", "");
+      var title = $(this).children('.card__content').children('.card__heading').html();
+      var target = '<a class="card small" href="'+this.href+'" style="height:100px; width:100px;"><div class="card__background" style="background-image: '+bg+'"></div><div class="card__content"><h3 class="card__heading" style="word-spacing: 0vw;font-size:20px;">'+title+'Rise up</h3></div></a>';
+
+      $("#playlog").append(target);
+      sessionStorage.setItem("playlog", $("#playlog").html());
+})
+
     function noti() {
   if($(".dropdown-menu").css("display") == "none"){
     $(".dropdown-menu").show();
@@ -331,6 +436,21 @@ header .full {
     $(".dropdown-menu").hide();
 }
 }
+
+function clearLog() {
+  javascript:sessionStorage.clear();
+  $("#playlog").html('<img src="https://images.ctfassets.net/5m01esa8nofr/4PT1wAuMXKkyuEMK2oia0y/3e0ae5708483b205b9787523eb91a6d9/404.gif" style="width:30%;"><span style="padding-top:40px; margin-left:20px;">아직 실행한 게임이 없네요.</span>');
+  mdtoast('플레이로그를 모두 삭제했어요', { 
+  type: 'success',
+  duration: 2500
+});
+}
+
+
+
+
+
+
 
   </script>
 
